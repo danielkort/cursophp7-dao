@@ -8,10 +8,23 @@ require_once("config.php");
 
 //echo json_encode($usuarios);
 
-$root = new Usuario();
 
-$root->loadById(4);
+//Carrega um usuario
+//$root = new Usuario();
+//$root->loadById(4);
+//echo $root;
 
-echo $root;
+//carrega uma lista de usuarios
+//$lista = Usuario::getList();
+//echo json_encode($lista);
+
+//Carrega uma lista de usuarios buscando pelo login
+//$search = Usuario::search("da");
+//echo json_encode($search);
+
+//Carrega usuario usando o login e a senha
+$usuario = new Usuario();
+$usuario->login("teste", "852963");
+echo $usuario;
 
 ?>
