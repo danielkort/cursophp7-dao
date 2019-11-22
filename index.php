@@ -23,8 +23,13 @@ require_once("config.php");
 //echo json_encode($search);
 
 //Carrega usuario usando o login e a senha
-$usuario = new Usuario();
-$usuario->login("teste", "852963");
-echo $usuario;
+//$usuario = new Usuario();
+//$usuario->login("teste", "852963");
+//echo $usuario;
+
+//inserir usuario no banco de dados
+$aluno = new Usuario("aluno2", "qwe123!@#");
+$aluno->insert();
+echo $aluno;
 
 ?>
